@@ -16,19 +16,19 @@ This sample demonstrates the following use cases:
 ```mermaid
 sequenceDiagram
     autonumber
-    Browser-->>Next.js endpoint: User clicks on login button (/api/auth/login)
+    Browser-->>Next.js API endpoints: User clicks on login button (/api/auth/login)
     Browser-->>Auth0: User is redirected to Auth0 login dialog
-    Auth0-->>Next.js endpoint: /api/auth/callback
-    Next.js endpoint->>Auth0: Code exchange
-    Auth0->>Next.js endpoint: Receive session
-    Next.js endpoint-->>Commerce Layer: Get or create customer
-    Commerce Layer-->>Next.js endpoint: Receive Commerce Layer customer ID
-    Next.js endpoint->>Auth0: Update user metadata with Commerce Layer customer ID
-    Next.js endpoint->>Browser: Session cookie
-    Browser->>Next.js endpoint: call to /api/token
-    Next.js endpoint->>Next.js endpoint: Generate customer token
-    Note right of Next.js endpoint: The endpoint generates the customer <br>token building a payload and signing it with<br>the organization secret.
-    Next.js endpoint->>Browser: receives Commerce Layer customer token
+    Auth0-->>Next.js API endpoints: /api/auth/callback
+    Next.js API endpoints->>Auth0: Code exchange
+    Auth0->>Next.js API endpoints: Receive session
+    Next.js API endpoints-->>Commerce Layer: Get or create customer
+    Commerce Layer-->>Next.js API endpoints: Receive Commerce Layer customer ID
+    Next.js API endpoints->>Auth0: Update user metadata with Commerce Layer customer ID
+    Next.js API endpoints->>Browser: Session cookie
+    Browser->>Next.js API endpoints: call to /api/token
+    Next.js API endpoints->>Next.js API endpoints: Generate customer token
+    Note right of Next.js API endpoints: The endpoint generates the customer <br>token building a payload and signing it with<br>the organization secret.
+    Next.js API endpoints->>Browser: receives Commerce Layer customer token
 ```
 
 The following diagram outlines the steps involved in the customer signup/signin process and the acquisition of a customer token, which grants access to Commerce Layer functionality.

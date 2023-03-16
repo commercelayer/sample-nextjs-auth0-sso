@@ -48,7 +48,7 @@ const NavBar = () => {
                     </PageLink>
                   </NavItem>
                   <NavItem>
-                    <PageLink href="/orders" className="nav-link" testId="navbar-external">
+                    <PageLink href="/orders" className="nav-link">
                       Orders
                     </PageLink>
                   </NavItem>

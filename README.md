@@ -11,6 +11,41 @@ This sample demonstrates the following use cases:
 - [Commerce Layer product and price on the homepage](https://github.com/auth0-samples/auth0-nextjs-samples/blob/main/)
 - [Commerce Layer user's order history](https://github.com/auth0-samples/auth0-nextjs-samples/blob/main/)
 
+## Sequence diagram
+
+```mermaid
+sequenceDiagram
+    autonumber
+    Browser-->>Next.js endpoint: User clicks on login button (/api/auth/login)
+    Browser-->>Auth0: User is redirected to Auth0 login dialog
+    Auth0-->>Next.js endpoint: /api/auth/callback
+    Next.js endpoint->>Auth0: Code exchange
+    Auth0->>Next.js endpoint: Receive session
+    Next.js endpoint-->>Commerce Layer: Get or create customer
+    Commerce Layer-->>Next.js endpoint: Receive Commerce Layer customer ID
+    Next.js endpoint->>Auth0: Update user metadata with Commerce Layer customer ID
+    Next.js endpoint->>Browser: Session cookie
+    Browser->>Next.js endpoint: call to /api/token
+    Next.js endpoint->>Next.js endpoint: Generate customer token
+    Note right of Next.js endpoint: The endpoint generates the customer <br>token building a payload and signing it with<br>the organization secret.
+    Next.js endpoint->>Browser: receives Commerce Layer customer token
+```
+
+The following diagram outlines the steps involved in the customer signup/signin process and the acquisition of a customer token, which grants access to Commerce Layer functionality.
+
+1. User clicks on the login button.
+2. The Next.js endpoint (`/api/auth/login`) redirects to the Auth0 Login Dialog.
+3. After successful authentication, Auth0 calls the `/api/auth/callback` endpoint with a code.
+4. The Next.js endpoint exchanges the code with Auth0.
+5. Auth0 replies with an access token and an ID token.
+6. Using a Commerce Layer integration application, the customer is retrieved or created on Commerce Layer using their email.
+7. The customer ID is received from Commerce Layer.
+8. The user metadata on Auth0 is updated with the customer ID provided by Commerce Layer using an Auth0 M2M application.
+9. An Auth0 session is created on the browser.
+10. The protected endpoint `/api/token` can now be called as the user is logged in with Auth0.
+11. The customer ID is retrieved from the user's metadata on Auth0 using an Auth0 M2M application and is used to build the payload for the access token. Using the shared secret of the organization, the JWT is generated.
+12. The customer token is retrieved on the frontend, allowing the user to interact with Commerce Layer APIs as the customer.
+
 ## Project setup
 
 Use `pnpm` to install the project dependencies:

@@ -4,12 +4,12 @@ This sample demonstrates the integration of [Auth0 Next.js SDK](https://github.c
 
 This sample demonstrates the following use cases:
 
-- [Login](https://github.com/auth0-samples/auth0-nextjs-samples/blob/main/Sample-01/components/NavBar.jsx#L61-L67)
-- [Logout](https://github.com/auth0-samples/auth0-nextjs-samples/blob/main/Sample-01/components/NavBar.jsx#L93-L95)
-- [Showing the user profile](https://github.com/auth0-samples/auth0-nextjs-samples/blob/main/Sample-01/pages/profile.jsx)
-- [Protecting client-side rendered pages](https://github.com/auth0-samples/auth0-nextjs-samples/blob/main/Sample-01/pages/profile.jsx#L43-L46)
-- [Commerce Layer product and price on the homepage](https://github.com/auth0-samples/auth0-nextjs-samples/blob/main/)
-- [Commerce Layer user's order history](https://github.com/auth0-samples/auth0-nextjs-samples/blob/main/)
+- [Login](https://github.com/commercelayer/sample-nextjs-auth0-sso/blob/main/components/NavBar.jsx#L61-L67)
+- [Logout](https://github.com/commercelayer/sample-nextjs-auth0-sso/blob/main/components/NavBar.jsx#L93-L95)
+- [Showing the user profile](https://github.com/commercelayer/sample-nextjs-auth0-sso/blob/main/pages/profile.jsx)
+- [Protecting client-side rendered pages](https://github.com/commercelayer/sample-nextjs-auth0-sso/blob/main/pages/profile.jsx#L43-L46)
+- [Commerce Layer product and price on the homepage](https://github.com/commercelayer/sample-nextjs-auth0-sso/blob/main/components/Content.jsx)
+- [Commerce Layer user's order history](https://github.com/commercelayer/sample-nextjs-auth0-sso/blob/main/pages/orders.jsx)
 
 ## Sequence diagram
 

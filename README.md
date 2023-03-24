@@ -2,6 +2,12 @@
 
 This sample demonstrates the integration of [Auth0 Next.js SDK](https://github.com/auth0/nextjs-auth0) into a Next.js application created using [create-next-app](https://nextjs.org/docs/api-reference/create-next-app). Use it to integrate with Commerce Layer. The sample is a companion to the [Auth0 Next.js SDK Quickstart](https://auth0.com/docs/quickstart/webapp/nextjs). To get started, kindly read [this comprehensive tutorial](https://commercelayer.io/blog/how-to-single-sign-on-with-nextjs-auth0-and-commerce-layer) on Commerce Layer's blog.
 
+## What is Commerce Layer?
+
+[Commerce Layer](https://commercelayer.io) is a multi-market commerce API and order management system that lets you add global shopping capabilities to any website, mobile app, chatbot, wearable, voice, or IoT device, with ease. Compose your stack with the best-of-breed tools you already mastered and love. Make any experience shoppable, anywhere, through a blazing-fast, enterprise-grade, and secure API.
+
+## Scope of the sample
+
 This sample demonstrates the following use cases:
 
 - [Login](https://github.com/commercelayer/sample-nextjs-auth0-sso/blob/main/components/NavBar.jsx#L61-L67)

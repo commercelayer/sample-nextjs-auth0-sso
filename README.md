@@ -94,7 +94,8 @@ AUTH0_AUDIENCE='YOUR_AUTH0_API_IDENTIFIER'
 AUTH0_SCOPE='openid profile email'
 ```
 
-**Note**: Make sure you replace `AUTH0_SECRET` with your own secret (you can generate a suitable string using `openssl rand -hex 32` on the command line).
+> **Note**<br />
+> Make sure you replace `AUTH0_SECRET` with your own secret (you can generate a suitable string using `openssl rand -hex 32` on the command line).
 
 Add a new Machine to Machine application and add to `.env.local` the following variables:
 
